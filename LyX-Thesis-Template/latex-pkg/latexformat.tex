@@ -1,0 +1,45 @@
+
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+
+%\fancyhead[RO,LE]{\sf\bfseries\thepage} %http://www.ctan.org/tex-archive/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+
+
+%
+% \lhead[\fancyplain{}{\sf\bfseries\thepage}]%
+%  {\fancyplain{}{\sf\bfseries\rightmark}}
+% \rhead[\fancyplain{}{\sf\bfseries\leftmark}]%
+%  {\fancyplain{}{\sf\bfseries\thepage}}
+%
+
+
+\lhead[\fancyplain{}{\rm\bfseries}]%
+ {\fancyplain{}{\rm\bfseries\rightmark}}
+\rhead[\fancyplain{}{\rm\bfseries\leftmark}]%
+ {\fancyplain{}{\rm\bfseries}}
+% \cfoot{}
+\renewenvironment{itemize}%
+  {\begin{list}{$\bullet$}%
+               {\setlength{\parsep}{0.1cm}
+                \setlength{\itemsep}{0.cm}}}%
+  {\end{list}}
+
+\renewenvironment{enumerate}%
+  {\begin{list}{\addtocounter{enumi}{1}\arabic{enumi}.}%
+               {\setlength{\parsep}{0.1cm}
+                \setlength{\itemsep}{0.cm}}}%
+  {\end{list}\setcounter{enumi}{0}}
+
+
+
+\renewcommand{\chapterheadstartvskip}{}
+
+
+
+
+
+

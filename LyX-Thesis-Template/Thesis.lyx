@@ -1,0 +1,895 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\pdfpageheight11in
+\pdfpagewidth8.5in
+% KZ \documentclass[letter,10pt, TexShade]{book} 
+\RequirePackage{fix-cm}
+\usepackage{etex}
+\usepackage{epsfig}
+\usepackage{etex}
+\usepackage{epsfig}
+%\usepackage{subfigure}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{mathabx}
+\usepackage{multirow}
+\usepackage{moreverb}
+\usepackage{multicol}
+\usepackage{alltt}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{fancyvrb}
+\usepackage{dsfont}
+\usepackage{moreverb}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{rotating}
+
+\usepackage{epsfig}
+\usepackage{calc}
+\usepackage{listings}
+\usepackage{bm}
+% \usepackage{amsthm}
+\usepackage{theorem}
+\usepackage{times}
+\usepackage{epsfig}\usepackage{calc}
+\usepackage{moresize}
+%\usepackage[ruled]{algorithm2e}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[bf,rm,medium,compact]{titlesec}
+\usepackage{times}
+\usepackage{pifont}% to include symbols from different fonts (e.g.  \rtm)
+\usepackage{eurosym}% for the euro symbol, package by Henrik Theiling
+% AMS for e.g. \text{}
+\usepackage{graphicx}
+\usepackage{booktabs}% tables as required by journals
+\usepackage{fancyhdr}% fancy page headers/footers
+\usepackage{vmargin}% for \setmarginsrb                                      
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{latex-pkg/postscript}% HV's elaboration of epsf
+\usepackage[nolineno]{latex-pkg/lgrind}% for typesetting MSL, Gentle, C, C++, ... code
+\usepackage[grey]{latex-pkg/quotchap}
+\usepackage{latex-pkg/TexShade}
+%\usepackage[ruled]{algorithm2e}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[bf,rm,medium,compact]{titlesec}% nice section titles
+\usepackage{pifont}% to include symbols from different fonts (e.g.  \rtm)
+\usepackage{eurosym}% for the euro symbol, package by Henrik Theiling
+% AMS for e.g. \text{}
+\usepackage{booktabs}% tables as required by journals
+\usepackage{fancyhdr}% fancy page headers/footers
+\usepackage{vmargin}% for \setmarginsrb                                      
+\usepackage{latex-pkg/postscript}% HV's elaboration of epsf
+\usepackage[nolineno]{latex-pkg/lgrind}% for typesetting MSL, Gentle, C, C++, ... code
+\usepackage[grey]{latex-pkg/quotchap}
+\usepackage{latex-pkg/TexShade}
+\usepackage{longtable}
+\usepackage{ltcaption}
+% The ltcaption package supports \CaptionLabelFont & \CaptionTextFont
+% introduced by the NTG document classes
+\renewcommand{\CaptionLabelFont}{\normalsize}
+\renewcommand{\CaptionTextFont}{\normalsize}
+
+%
+%  Brown  Maroon  NavyBlue  MidnightBlue  
+%
+
+% INCLUDE HVs CUSTOMIZATIONS
+\input{latex-pkg/defaultcustom.tex}
+% INCLUDE LATEX PACKAGES
+
+
+\newcommand{\arraybslash}{\let\\\@arraycr}
+%\@addtoreset{chapter}{part}
+
+
+
+
+\lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
+\lstset{framextopmargin=5pt,frame=bottomline}
+
+
+%[latin1]
+% INCLUDE LATEX PREAMBLE
+% SETTINGS FOR listings PACKAGE
+\lstset{
+    numberstyle=\tiny,
+    numbers=left,
+    stepnumber=1,
+    numbersep=5pt,
+    tabsize=2,
+    showstringspaces=false,
+    aboveskip=\smallskipamount,
+    belowskip=\smallskipamount,
+    lineskip=-2pt
+}
+
+% PAGE COLOR and SETTINGSx
+
+
+% \setlength{\headheight}{2cm}
+% \setlength{\marginparwidth}{1.9cm}
+% MAKE INDEX
+
+
+% CUSTOM COMMANDS
+\newcommand{\linka}[1]{{\tt\htmladdnormallink{#1}{#1}}}
+\newcommand{\linkb}[2]{{\tt\htmladdnormallink{#1}{#2}}}
+\newcommand{\parcomment}[1]{\marginpar{\scriptsize{\textcolor{blue}{#1}}}}
+\newcommand{\defn}[2]{{\begin{minipage}{\textwidth}\vspace{2pt}\emph{\textbf{#1}}:\vspace{1pt}\begin{center}\fbox{\begin{minipage}{5.5in}#2\end{minipage}}\end{center}\vspace{2pt}\end{minipage}}}
+
+% lgrind FONTS
+\def\BGfont{\small\tt}
+\def\CMfont{\small\tt}
+\def\NOfont{\small\tt}
+\def\KWfont{\small\tt}
+\def\STfont{\small\tt}
+\def\TTfont{\small\tt}
+\def\VRfont{\small\tt}
+
+% KZ definitions
+\input{content/thesisparams.tex}
+
+% DOCUMENT BEGINS
+\end_preamble
+\options letter,TexShade,letterpaper
+\use_default_options false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfa,urlcolor=black,linkcolor=Brown,citecolor=Brown,filecolor=Brown,urlcolor=Brown"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\backgroundcolor #ffffff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+empty
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{onehalfspacing}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/FirstPage.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{onehalfspacing}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+onehalfspacing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+plain
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/en_Absract.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/fr_Absract.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/contributions.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/Acknowledgements.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setstretch
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+0.7
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{onehalfspacing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{onehalfspacing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+fancyplain
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "latex-pkg/latexformat.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+interfootnotelinepenalty
+\end_layout
+
+\end_inset
+
+=10000
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+onehalfspacing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+graphicspath
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+img/
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "base/intro/intro.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+You can have parts if you want: Part 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "part:part1"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Chapter
+Chapter 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "ch:chapter1"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "base/chapter/chapter.lyx"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Part
+Final Conclusion & Future Work
+\end_layout
+
+\begin_layout Chapter
+Final Conclusion & Future Work
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "part:conclusion"
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "base/conclusion/conclusion.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{onehalfspacing}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/publications.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{onehalfspacing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptermark{
+\end_layout
+
+\end_inset
+
+
+\family roman
+\series bold
+Bibliography
+\family default
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Bibliography}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Thesis"
+options "alpha"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{onehalfspacing}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "content/acronyms.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{onehalfspacing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size normal
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
