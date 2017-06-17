@@ -1,0 +1,129 @@
+% ---------------  From an early version of the tth-manual
+
+%%tth:\def\title#1{\bgroup\leftskip 0 pt plus1fill \rightskip 0 pt plus1fill
+%%tth:\pretolerance=100000 \lefthyphenmin=20 \righthyphenmin=20
+%%tth:\noindent
+%%tth:#1
+%%tth:\par\egroup}% Centers a possibly multi-line title.
+%%tth:\let\author=\title % Actually smaller font than title in LaTeX.
+
+\providecommand{\tthdump}[1]{#1}
+%%tth:\renewcommand{\tthdump}[1]{}
+
+% standard form of hyperlinks for LaTeX
+
+\providecommand{\href}[2]{%
+%%tth:\ \special{html:<a href=}{"}#1"\special{html:>}{#2}\special{html:</a>}
+\tthdump{#2}%
+}
+
+% link to a document that should appear in a new window
+
+\newcommand{\wref}[2]{%
+%%tth:\ \special{html:<a href=}{"}#1"\special{html:target=" ">}{#2}\special{html:</a>}
+\tthdump{#2}%
+}
+
+% LaTeX-\ref extended with a text to prepend and an optional URL
+% to prepend the generated reference.
+
+\providecommand{\xref}[3][]{\tthdump{#3~\ref{#2}}%
+%%tth:\special{html:<a href=}{"}#1\##2"\special{html:>}%
+%%tth:#3~\ref{#2}\special{html:</a>}%
+}
+
+% ------- \xcite[URL]{cite-id}{preceding text}
+%
+
+\providecommand{\xcite}[3][]{% \tthdump{#3 \cite{#2}}%
+%%tth:\special{html:<a href=}{"}#1\##2"\special{html:>}%
+#3~\cite{#2}%
+%%tth:\special{html:</a>}%
+}
+
+% a minor shorthand
+
+\providecommand{\tthbib}[1]{%
+%%tth:\bibliography{#1}
+%%tth:\bibliographystyle{plain}
+}
+
+% who could expect tth and LaTeX to agree on how an emdash looks
+
+\providecommand{\mydash}{\tthdump{---}%
+%%tth:-%
+}
+
+% pagereferences are meaningless to tth
+
+\newcommand{\pref}[1]{%
+\tthdump{(page \pageref{#1})}%
+%%tth:(link to point \ref{#1})%
+}
+
+\newcommand{\home}[1]{%%tth:\~{}#1%
+\tthdump{$\sim$#1}%
+}
+
+\newcommand{\bgcolor}[1]{
+%%tth:\special{html:<body bgcolor=}#1\special{html:>}
+}
+\newcommand{\img}[1]{
+%%tth:\special{html:<img align=middle src=}"#1"\special{html:>}
+}
+
+\newcommand{\mytitle}[2][]{
+\tthdump{
+  \thispagestyle{empty}
+  \begin{center}
+    \textbf{\Large #2}
+  \end{center}
+}
+%%tth:\special{html:
+%%tth:<P><TABLE WIDTH=100\%><TR><TD ALIGN=LEFT width=30\%>%
+%%tth:<A HREF="http://www.imm.dtu.dk/">
+%%tth:<IMG ALIGN=MIDDLE SRC="http://www.imm.dtu.dk/courses/02130/imm.gif" BORDER=0></A>%
+%%tth:</TD><TD rowspan=2 ALIGN=CENTER width=55\%><FONT SIZE=+2><STRONG>#1</STRONG></FONT>%
+%%tth:</TD><TD rowspan=2 ALIGN=RIGHT width=15\%>%
+%%tth:<IMG ALIGN=MIDDLE SRC="http://www.imm.dtu.dk/courses/02130/dtulogo.gif" BORDER=0>%
+%%tth:</TD></TR>%
+%%tth:<TR><TD ALIGN=LEFT>%
+%%tth:<FONT size=-2> IMM: Informatik og Matematisk Modellering</FONT></TD></TR>
+%%tth:</TABLE><HR>
+%%tth:<P>
+%%tth:}
+%%tth:\title{#2}\bgcolor{white}
+}
+
+\newcommand{\myauthor}[2][(\today)]{
+\tthdump{
+  \begin{center}\em
+    #2 #1
+  \end{center}
+}
+%%tth:\begin{center}\Large\emph{#2}\end{center}
+}
+
+\newcommand{\htmlsignature}[1][\jsm]{#1}%
+
+\newcommand{\jsm}{
+%%tth:\\\hrulefill\\{\small
+%%tth:Maintained by: \href{mailto:jsm@imm.dtu.dk}{Jørgen
+%%tth:Steensgaard-Madsen, IMM, DTU}
+%%tth:\\Last modified: \today}%
+}
+
+\newcommand{\tthonly}[1]{%
+%%tth:#1%
+}
+
+% LaTeX and tth differs in their handling of descriptions
+% The following command causes problems in
+%   item[...] \itemhd
+% but is ok in
+%   item[...]\itemhd
+% The name seems to be badly chosen
+
+\newcommand{\itemhd}{\tthdump{%
+\hfill\\
+}}

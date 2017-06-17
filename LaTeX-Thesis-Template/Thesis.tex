@@ -1,0 +1,337 @@
+% KZ \documentclass[letter,10pt, TexShade]{book} 
+\documentclass[letter,12pt,TexShade,oneside]{book} 
+\RequirePackage{fix-cm}
+\usepackage{etex}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{etex}
+\usepackage{epsfig}
+\usepackage{amsmath}
+%\usepackage{subfigure}
+\usepackage[landscape]{geometry}
+\usepackage{lscape}
+\usepackage[pdfa,colorlinks=true,urlcolor=black]{hyperref}
+\usepackage{tabularx}
+\usepackage{mathabx}
+\usepackage{multirow}
+\usepackage{moreverb}
+\usepackage{multicol}
+\usepackage{alltt}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{makeidx}
+\usepackage{fancyvrb}
+\usepackage{inputenc}
+\usepackage{dsfont}
+\usepackage{moreverb}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{rotating}
+\hypersetup{colorlinks=true, linkcolor=Brown, citecolor=Brown, filecolor=Brown, urlcolor=Brown}
+\usepackage{epsfig}
+\usepackage{calc}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{bm}
+% \usepackage{amsthm}
+\usepackage{theorem}
+\usepackage{times,epsfig}
+\usepackage{calc}
+\usepackage{moresize}
+%\usepackage[ruled]{algorithm2e}
+\usepackage[caption=false]{subfig}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[bf,rm,medium,compact]{titlesec}
+\usepackage{times}  
+\usepackage{pifont}     % to include symbols from different fonts (e.g.  \rtm)
+\usepackage{eurosym}    % for the euro symbol, package by Henrik Theiling
+\usepackage{amstext}    % AMS for e.g. \text{}
+\usepackage{graphicx}
+\usepackage{booktabs}   % tables as required by journals
+\usepackage{fancyhdr}                % fancy page headers/footers
+\usepackage{vmargin}    % for \setmarginsrb                                      
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{algorithm2e}
+\usepackage{latex-pkg/postscript} % HV's elaboration of epsf
+\usepackage[nolineno]{latex-pkg/lgrind}     % for typesetting MSL, Gentle, C, C++, ... code
+\usepackage[grey]{latex-pkg/quotchap}
+\usepackage{latex-pkg/TexShade}
+%\usepackage[ruled]{algorithm2e}
+\usepackage[caption=false]{subfig}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[bf,rm,medium,compact]{titlesec} % nice section titles
+\usepackage{pifont}     % to include symbols from different fonts (e.g.  \rtm)
+\usepackage{eurosym}    % for the euro symbol, package by Henrik Theiling
+\usepackage{amstext}    % AMS for e.g. \text{}
+\usepackage{booktabs}   % tables as required by journals
+\usepackage{fancyhdr}                % fancy page headers/footers
+\usepackage{vmargin}    % for \setmarginsrb                                      
+\usepackage{latex-pkg/postscript} % HV's elaboration of epsf
+\usepackage[nolineno]{latex-pkg/lgrind}     % for typesetting MSL, Gentle, C, C++, ... code
+\usepackage[grey]{latex-pkg/quotchap}
+\usepackage{latex-pkg/TexShade}
+\usepackage{longtable}
+\usepackage{ltcaption}
+% The ltcaption package supports \CaptionLabelFont & \CaptionTextFont
+% introduced by the NTG document classes
+\renewcommand\CaptionLabelFont{\normalsize}
+\renewcommand\CaptionTextFont{\normalsize}
+
+%
+%  Brown  Maroon  NavyBlue  MidnightBlue  
+%
+
+% INCLUDE HVs CUSTOMIZATIONS
+\input{latex-pkg/defaultcustom.tex}
+% INCLUDE LATEX PACKAGES
+
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+%\@addtoreset{chapter}{part}
+\makeatother
+
+
+
+\lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
+\lstset{framextopmargin=5pt,frame=bottomline}
+
+
+%[latin1]
+% INCLUDE LATEX PREAMBLE
+% SETTINGS FOR listings PACKAGE
+\lstset{
+    numberstyle=\tiny,
+    numbers=left,
+    stepnumber=1,
+    numbersep=5pt,
+    tabsize=2,
+    showstringspaces=false,
+    aboveskip=\smallskipamount,
+    belowskip=\smallskipamount,
+    lineskip=-2pt
+}
+
+% PAGE COLOR and SETTINGSx
+\pagecolor{white}
+
+% \setlength{\headheight}{2cm}
+% \setlength{\marginparwidth}{1.9cm}
+% MAKE INDEX
+\makeindex
+
+% CUSTOM COMMANDS
+\newcommand{\linka}[1]{{\tt\htmladdnormallink{#1}{#1}}}
+\newcommand{\linkb}[2]{{\tt\htmladdnormallink{#1}{#2}}}
+\newcommand{\parcomment}[1]{\marginpar{\scriptsize{\textcolor{blue}{#1}}}}
+\newcommand{\defn}[2]{{\begin{minipage}{\textwidth}\vspace{2pt}\emph{\textbf{#1}}:\vspace{1pt}\begin{center}\fbox{\begin{minipage}{5.5in}#2\end{minipage}}\end{center}\vspace{2pt}\end{minipage}}}
+
+% lgrind FONTS
+\def\BGfont{\small\tt}
+\def\CMfont{\small\tt}
+\def\NOfont{\small\tt}
+\def\KWfont{\small\tt}
+\def\STfont{\small\tt}
+\def\TTfont{\small\tt}
+\def\VRfont{\small\tt}
+
+% KZ definitions
+\input{content/thesisparams.tex}
+
+% DOCUMENT BEGINS
+\begin{document}
+
+
+\pagestyle{empty} %defines the general contents of the headers and footers (e.g. where the page number will be printed)
+
+%%%%%%%%%%%%%%%%%%%
+%
+% TITLE PAGE
+%
+%%%%%%%%%%%%%%%%%%%
+\begin{onehalfspacing}
+\input{content/FirstPage.tex}
+\cleardoublepage
+\end{onehalfspacing}
+
+
+%%%%%%%%%%%%%%%%%%%
+%
+% SPACING
+%
+%%%%%%%%%%%%%%%%%%%
+%
+% \singlespacing
+% \doublespacing
+% \onehalfspacing 
+%
+% \setstretch{1.8}
+%
+
+\onehalfspacing 
+
+% \doublespacing
+
+% ROMAN PAGE NUMBERING
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\begin{Large}
+\end{Large}
+
+%%%%%%%%%%%%%%%%%%%
+%
+% ABSTRACT
+%
+%%%%%%%%%%%%%%%%%%%
+
+\input{content/en_Absract.tex}
+\clearpage
+
+%\bigskip \bigskip
+
+\input{content/fr_Absract.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%
+%
+% ACKNOWLEDGEMENT
+%
+%%%%%%%%%%%%%%%%%%%
+\input{content/contributions.tex}
+
+\input{content/Acknowledgements.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%
+%
+%  Table Of Content
+%  List Of Figures
+%  List Of Tables
+%
+%%%%%%%%%%%%%%%%%%%
+
+%\setstretch{0.0}
+% \begin{singlespacing}
+% \begin{spacing}{0.5}
+% KZ WORKING BEFORE AUG 11 \setstretch{0.5}
+
+\setstretch{0.7}
+
+\tableofcontents
+% \end{spacing}
+\listoffigures
+% \end{singlespacing}
+
+\begin{onehalfspacing}
+
+\listoftables
+
+%\listofalgorithms
+
+\end{onehalfspacing}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%
+%
+%  ABBREVIATIONS
+%
+%%%%%%%%%%%%%%%%%%%%
+% \nomenclature{RC}{Read Committed}
+% \nomenclature{SI}{Snapshot Isolation}
+% \nomenclature{JOCC}{JPA Optimistic Concurrency Control}
+% \nomenclature{\textsc{colAgent}}{Collector Agent}
+
+% ARABIC PAGE NUMBERING
+\pagenumbering{arabic}
+\pagestyle{fancyplain}
+
+% INCLUDE HVs DEFAULT FORMATTING
+\input{latex-pkg/latexformat.tex}
+
+\interfootnotelinepenalty=10000 %priority, to make sure the footnote is not dvided between pages.
+
+\onehalfspacing
+
+
+% ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% BEGIN_Chapters
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%
+% MTT
+%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{img/}}
+
+%\part{Scalable Cheat-Resistant Multiplayer Online Games}
+%\label{part:intro}
+
+\input{base/intro/intro.tex}
+
+\part{You can have parts if you want: Part 1}
+\label{part:part1}
+\chapter{Chpater 1}
+\label{ch:chapter1}
+\input{base/chapter/chapter.tex}
+\part{Final Conclusion \& Future Work}
+\chapter{Final Conclusion \& Future Work}
+\label{part:conclusion}
+\input{base/conclusion/conclusion.tex}
+
+
+\begin{onehalfspacing}
+\input{content/publications.tex}
+\end{onehalfspacing}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%
+%
+% BIBLIOGRAPHY
+%
+%%%%%%%%%%%%%%%%%%%
+
+
+%\chapter*{\rm\bfseries Bibliography}
+\chaptermark{{\rm\bfseries Bibliography}}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibliographystyle{alpha}
+\bibliography{Thesis}
+
+%\addcontentsline{toc}{chapter}{\numberline{}\rm\bfseries{Bibliography}}
+
+\begin{onehalfspacing}
+\input{content/acronyms.tex}
+\end{onehalfspacing}
+
+\normalsize
+\printindex
+
+%%%%%%%%%%%%%%%%%%%
+%
+% APPENDICES
+%
+%%%%%%%%%%%%%%%%%%%
+
+% \appendix
+
+
+% \input{content/ConsADExamples.tex}
+
+\end{document}

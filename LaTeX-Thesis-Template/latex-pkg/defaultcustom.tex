@@ -1,0 +1,198 @@
+%
+% thesis.tex
+%
+% HV's thesis customisations
+%
+% for double sided printing, use book style.
+% for single sided printing, use report style.
+% This mainly has an inpact on the headings.
+
+%% BEWARE of the order of the following packages !!
+%% A different order may NOT work
+
+
+
+
+% Modify algorithm package to HV's tastes
+%\renewcommand{\algorithmicrequire}{\textbf{\textsf{Require:}}}
+%\renewcommand{\algorithmicensure}{\textbf{\textsf{Ensure:}}}
+%\renewcommand{\algorithmicend}{\textbf{\textsf{end}}}
+%\renewcommand{\algorithmicif}{\textbf{\textsf{if}}}
+%\renewcommand{\algorithmicthen}{\textbf{\textsf{then}}}
+%\renewcommand{\algorithmicelse}{\textbf{\textsf{else}}}
+%\renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+%\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+%\renewcommand{\algorithmicfor}{\textbf{\textsf{for}}}
+%\renewcommand{\algorithmicforall}{\textbf{\textsf{for all}}}
+%\renewcommand{\algorithmicdo}{\textbf{\textsf{do}}}
+%\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\renewcommand{\algorithmicwhile}{\textbf{\textsf{while}}}
+%\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+%\renewcommand{\algorithmicloop}{\textbf{\textsf{loop}}}
+%\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+%\renewcommand{\algorithmicrepeat}{\textbf{\textsf{repeat}}}
+%\renewcommand{\algorithmicuntil}{\textbf{\textsf{until}}}
+%
+%\renewcommand{\algorithmiccomment}[1]{\hfill \{#1\}}
+
+% to test if in TTH (HTML generation)
+\newif\iftth
+% to have MathBlackboardBold in TeX, Calligraphic in TTH
+\newcommand{\bb}[1]{\iftth\cal{#1}\else\mathbb{#1}\fi}
+
+% Currently, to fit as much on a page as possible
+%
+%\setpapersize{A4} % necessary when using a4paper ?
+
+
+%
+% KZ \setmarginsrb{3cm}{1.7cm}{2.2cm}{2.7cm}
+% KZ 	     {12pt}{25pt}{12pt}{40pt}
+%
+
+%\setmarginsrb{3cm}{1.7cm}{2.2cm}{2.7cm}
+%	     {12pt}{25pt}{12pt}{40pt}
+
+
+%
+%% \setmarginsrb{leftmargin}{topmargin}{rightmargin}{bottommargin}%
+%%              {headheight}{headsep}{footheight}{footskip}
+%
+% KZ
+%
+%\setmarginsrb{38mm}{25mm}{25mm}{25mm}%
+%	     {12pt}{25pt}{12pt}{40pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Printed Feb 25
+%
+%\setmarginsrb{36mm}{30mm}{24mm}{35mm}%
+%	      {12pt}{25pt}{12pt}{40pt}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% \setmarginsrb{leftmargin}{topmargin}{rightmargin}{bottommargin}%
+%%              {headheight}{headsep}{footheight}{footskip}
+
+%
+% KZ Working
+%
+%\setmarginsrb{36mm}{34mm}{22mm}{34mm}%
+%	     {12pt}{30pt}{12pt}{40pt}
+
+
+
+
+%
+% KZ Working 222
+%
+% \setmarginsrb{36mm}{28mm}{22mm}{35mm}%
+%	     {30pt}{20pt}{12pt}{40pt}
+%
+
+
+\setmarginsrb{36mm}{28mm}{22mm}{35mm}%
+	     {30pt}{20pt}{12pt}{40pt}
+
+
+
+
+% HV's manual adjustments were
+%\textwidth 16.5cm
+%\textheight 24.2cm
+%\topmargin -1.8cm
+%\oddsidemargin 0.cm
+
+%% standard scaling factor for included PostScript
+\newcommand{\epsscale}{0.7}
+
+% HV prefers not to indent paragraphs and skip only a little
+% KZ \parindent 0.cm
+% KZ \parskip 0.1cm
+
+
+%\parindent 0.0cm
+\parskip   0.25cm
+
+
+
+
+
+% To refer to the section etc. AND to the page,
+% use consistently only when referring into other chapter.
+%
+\newcommand{\fullref}[1]{\ref{#1} on page~\pageref{#1}}
+
+%
+% We don't want double space after end of sentence punctuation
+%
+\frenchspacing
+
+% Normal itemize takes too much space
+%
+%\renewenvironment{itemize}%
+%  {\begin{list}{$\bullet$}%
+%               {\setlength{\parsep}{0pt}
+%                \setlength{\itemsep}{0pt}}}%
+%  {\end{list}}
+
+% TM sign
+%\def\rtm{$^{\text{\Pisymbol{psy}{226}}}$} % The ``registered trademark sign''
+
+%% For formatting semantic definitions
+%  HV: keep this or change ?
+%
+\newcommand{\enum}{\ \textbf{enum}\ }
+\newcommand{\myif}{\ \textbf{if}\ }
+\newcommand{\myelse}{\ \textbf{else}\ }
+
+\newcommand{\defbegin}[1]{\begin{center}{\bf {\sf #1}}\end{center}
+ \hrule {\bf {\sf Syntax:}} \vspace{-0.2cm}}
+\newenvironment{semantics}{\vspace{-0.7cm}
+ {\bf {\sf Semantics:} \vspace{-0.2cm}}
+ \begin{quote}}{\end{quote}}
+\newcommand{\defobject}{\vspace{-0.7cm}{\bf {\sf Object:}
+\vspace{-0.2cm}}}
+\renewenvironment{object}{\vspace{-0.7cm}{\bf {\sf Object:}
+\vspace{-0.2cm}}  
+ \begin{quote}}{\end{quote}}
+\newcommand{\defend}{\hrule~\\}
+
+%% Miscellaneous preamble information
+
+\newcommand{\vb}[1]{\verb+#1+}
+\newcommand{\st}[1]{{\em #1\/}}
+\newcommand{\ic}{{\em i.c.,\ }}
+\newcommand{\ie}{{\em i.e.,\ }}
+\newcommand{\eg}{{\em e.g.,\ }}
+\newcommand{\vs}{{\em vs.\ }}
+\newcommand{\cfr}{{\em cfr.\ }}
+\newcommand{\etc}{{\em ,\ etc.\ }}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+
+\renewcommand{\contentsname}{{\huge\rm\bfseries{Contents}}}
+\renewcommand{\listfigurename}{{\huge\rm\bfseries{List of Figures}}}
+\renewcommand{\listtablename}{{\huge\rm\bfseries{List of Tables}}}
+%\renewcommand{\listalgorithmname}{{\huge\rm\bfseries{List of Algorithms}}}
+\renewcommand{\bibname}{{\rm\bfseries{Bibliography}}}
+
+
+
+
+
+
+% End of File defaultcustom.tex
+
+
+
+
+
+
+
+

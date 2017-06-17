@@ -1,0 +1,105 @@
+%*************************************************************************
+%*
+%* University of Gent
+%* Department of Applied Mathematics, Biometrics and Process Control
+%*
+%* Project: NONE
+%* File: $Source: /home/cvsroot/work/thesis/postscript.sty,v $
+%* Type: LaTeX
+%* Author: $Author: thomas $
+%* Locker: $Locker:  $
+%* Date: $Date: 2003/10/08 12:36:22 $    
+%* Revision: $Revision: 1.1.1.1 $
+%* State: $State: Exp $
+%*
+%*************************************************************************
+
+
+%* 
+%* Description: LaTeX style file allowing for Encapsulated PostScript
+%*              files to be included in LaTeX, contains macro 
+%*              definitions building on the basic epsf capabilities 
+%*              (see epsf.sty).
+%*
+%* Needs to be included as follows: 
+%*   \documentstyle[<...>,postscript,<...>]{<...>}
+%* 
+%* Commands:
+%*   \postscript{<eps_file_name>}{<factor>}
+%*     Will include the Encapsulated PostScript document in the file 
+%*     <eps_file_name> into the current LaTeX document.
+%*
+%*     Typical usage:
+%*       \begin{figure}
+%*       \postscript{my_picture.eps}{1}
+%*       \caption{my picture}
+%*       \end{figure}
+%*
+%*   \fpostscript{<eps_file_name>}{<factor>}
+%*     Similar to \postscript, but will draw a frame around the eps 
+%*     picture. The frame is drawn by TeX, so it will show up in a 
+%*     dvi preview. Hence, one can "debug" LaTeX files with 
+%*     Encapsulated PostScript, without actually generating
+%*     PostScript. Just xdvi (or xpreview) the .dvi file and the eps 
+%*     will show up as an empty frame.
+%*
+%*     <factor> determines the final size of the included picture. 
+%*     It is a factor (e.g., 0.5) relating to the actual textwidth 
+%*     of the document. Hence, if the a4wide style is used, 
+%*     \postscript{my_picture.eps}{1} will scale the picture to the 
+%*     full a4wide textwidth, whereas the twocolumn style option will 
+%*     result in scaling to the width of a single column.
+%*     Note: using \begin{figure*} allows one to have the picture 
+%*     scaled to the full textwidth, even in twocolumn style.
+%*     Factor 0 means: keep the natural size of the image.
+%*
+%*     For more direct control of PostScript inclusion, use espf.sty 
+%*     directives directly (see /usr/local/tex/inputs/epsf.sty).
+%*
+%*     If verbose output is wanted about the inclusion proces:
+%*     \epsfverbosetrue
+%*
+%*     To facilitate the draft/final version generation process,
+%*     \epsincl is provided. \epsincl is nothing but \postscript
+%*     or \fpostscript, depending on whether \drafttrue has
+%*     been set.
+%*
+
+%*
+%* Files this document depends on:
+%*   epsf.sty
+%*
+
+\NeedsTeXFormat{LaTeX2e}[1995/06/01]
+\ProvidesPackage{postscript}
+\RequirePackage{epsf}
+
+% include Encapsulated PostScript 
+\newcommand{\postscript}[2]
+{
+  \setlength{\epsfxsize}{#2\hsize}
+  \centerline{\epsfbox{#1}}
+}
+
+% include Encapsulated PostScript with frame
+\newcommand{\fpostscript}[2]
+{
+  \setlength{\epsfxsize}{#2\hsize}
+  \centerline{\fbox{\epsfbox{#1}}}
+}
+
+% Encapsulated PostScript inclusion controlled by \draft
+\newif\ifdraft % to distinguish beween draft and final versions
+               % use \drafttrue to set draft mode
+\newcommand{\epsincl}[2]
+{
+  \ifdraft
+    \fpostscript{#1}{#2}
+  \else
+    \postscript{#1}{#2}
+  \fi
+}
+
+\endinput
+
+%*************************************************************************
