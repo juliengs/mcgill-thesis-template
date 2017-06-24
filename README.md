@@ -19,3 +19,9 @@ My goal being to be able to write my thesis using LyX, I did a rough conversion 
 ## Bottom Line
 
 These template can be used to write a McGill thesis, but they can certainly be adapted to write thesis for other institutions with minimal effort. Please don't hesitate to fork this repository if you adapt these for other institutions and please let me know -- I will be happy to provide links to these.
+
+## Quick tips
+
+* To change the margins (LaTeX and LyX), please edit latex-pkg/defaultcustom.tex, line 113
+
+* The title page can be edited through file FirstPage.tex / FirstPage.lyx
