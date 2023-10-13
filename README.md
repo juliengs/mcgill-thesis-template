@@ -6,6 +6,8 @@ _Disclaimer: I am not the author of this template. I am not sure yet who invente
 
 In this repository, I am providing for convenience the LaTeX version of this template (which I did not create), as well as an adaptation of this template to the _LyX document processor_ software which I've generated from the LaTeX template.
 
+**New (oct 2023)**: [Maximilian Schiedermeier](https://www.cs.mcgill.ca/~mschie3/) has created another template, which is available directly on Overleaf: https://www.overleaf.com/latex/templates/mcgill-phd-thesis-template/fcrypzwmskwc
+
 ## LaTeX Template
 
 LaTeX is a de-facto document processing language for writing papers in the scientific community. As an academic's papers are often written in LaTeX, it makes sense to write one's thesis in LaTeX too, as it eases material reuse (i.e., snippets, figures, graphs, etc.). The LaTeX template provided in this repository cleanly decouples the different parts of the thesis into a logical directory structure and several LaTeX source files.
